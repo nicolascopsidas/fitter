@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matches",
+  "info": {
+    "name": "Match"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "team1": {
+      "unique": true,
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "team2": {
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "date": {
+      "type": "datetime",
+      "required": false
+    },
+    "duration": {
+      "type": "biginteger",
+      "required": true
+    }
+  }
+}
